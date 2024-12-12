@@ -1,0 +1,34 @@
+spring:
+  profiles:
+    active: "dev, log"
+  datasource:
+    username: searchUser
+    password: search_User
+    driver-class-name: com.mysql.cj.jdbc.Driver
+#    driver-class-name: com.p6spy.engine.spy.P6SpyDriver
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+#      format_sql: true
+    show-sql: false
+
+indexing-settings:
+  sites:
+    - url: https://www.skillbox.ru
+      name: Skillbox
+    - url: https://www.lenta.ru
+      name: Лента.ру
+    - url: https://www.playback.ru
+      name: PlayBack.Ru
+#    - url: https://ipfran.ru/
+#      name: ИПФРАН
+#    - url: https://nikoartgallery.com/
+#      name: Nico
+#    - url: https://dombulgakova.ru
+#      name: BulgakovsHome
+#    - url: https://volochek.life/
+#      name: Портал Вышнего Волочка
+#    - url: https://www.svetlovka.ru
+#      name: Svetlovka
+

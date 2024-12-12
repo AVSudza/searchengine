@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html  lang="ru">
+<head>
+<title>Java | Чтение и запись текстовых файлов</title>
+<meta charset="utf-8" />
+<meta name="description" content="Чтение и запись текстовых файлов в языке программирования Java. Классы FileReader и FileWriter и их методы">
+<meta name="viewport" content="width=device-width">
+<link href="https://metanit.com/style44.css?v=2" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=1q9eVYceJPGbyL2btvahGGteoZgiG0g8kqjKhLMf9yXbDNhoT8dMPkoUQSvMw-u4L34J8SavljAMcrPFf0LmcA" charset="UTF-8"></script></head>
+<body>
+<div id="container">
+<header>
+<div id="logo">
+<a class="logoTitle" href="/" title="На главную">METANIT.COM</a>
+<div class="logoDefinition">Сайт о программировании</div> 
+</div>
+</div>
+
+</header>
+ 
+     <h2>Чтение и запись текстовых файлов</h2>
+		 <div class="date">Последнее обновление: 26.04.2018</div>
+		
+		<style>
+		#yandex_rtb_R-A-201190-1 { width: 100%; height: 250px; overflow:hidden;}
+		@media(min-width: 760px) { #yandex_rtb_R-A-201190-1 { max-width: 728px; height: 90px;  } }
+		@media(min-width: 900px) { #yandex_rtb_R-A-201190-1 { max-width: 468px; height: 90px;  } }
+		@media(min-width: 1100px) { #yandex_rtb_R-A-201190-1{ max-width: 728px; height: 90px;} }
+		@media(min-width: 1400px) { #yandex_rtb_R-A-201190-1 { max-width: 970px; height: 90px;} }
+		</style>
+
+	<p>Хотя с помощью ранее рассмотренных классов можно записывать текст в файлы, однако они предназначены прежде всего для работы с бинарными 
+потоками данных, и их возможностей для полноценной работы с текстовыми файлами недостаточно. И для этой цели служат совсем другие классы, которые являются наследниками абстрактных классов <code>Reader</code> и <code>Writer</code>.</p>
+<h3>Запись файлов. Класс FileWriter</h3>
+<p>Класс FileWriter является производным от класса Writer. Он используется для записи текстовых файлов.</p>
+<p>Чтобы создать объект FileWriter, можно использовать один из следующих конструкторов:</p>
+<pre class="brush:java;">
+FileWriter(File file)
+FileWriter(File file, boolean append)
+FileWriter(FileDescriptor fd)
+FileWriter(String fileName)
+FileWriter(String fileName, boolean append) 
+</pre>
+<p>Так, в конструктор передается либо путь к файлу в виде строки, либо объект File, который ссылается на конкретный текстовый файл. Параметр <code>append</code> 
+указывает, должны ли данные дозаписываться в конец файла (если параметр равен true), либо файл должен перезаписываться.</p>
+<p>Запишем в файл какой-нибудь текст:</p>
+<p>В конструкторе использовался параметр <code>append</code> со значением false - то есть файл будет перезаписываться. Затем с помощью методов, определенных в базовом 
+классе Writer производится запись данных.</p>
+<h3>Чтение файлов. Класс FileReader</h3>
+<p>Класс FileReader наследуется от абстрактного класса Reader и предоставляет функциональность для чтения текстовых файлов.</p>
+<p>Для создания объекта FileReader мы можем использовать один из его конструкторов:</p>
+<p>А используя методы, определенные в базом классе Reader, произвести чтение файла:</p>
+<p>Также мы можем считывать в промежуточный буфер из массива символов:</p>
+<p>В данном случае считываем последовательно символы из файла в массив из 256 символов, пока не дойдем до конца файла в этом случае метод read возвратит число -1.</p>
+<p>Поскольку считанная порция файла может быть меньше 256 символов (например, в файле всего 73 символа), и если количество считанных данных меньше размера буфера (256), 
+то выполняем копирование массива с помощью метода Arrays.copy. То есть фактически обрезаем массив buf, оставляя в нем только те символы, которые считаны из файла.</p>
+	
+  </div>
+<div id="footer">
+
+<div class="bootomLinks">
+<a href="https://vk.com/metanit" title="Присоединиться к группе вконтакте" rel="nofollow">
+Вконтакте</a>|
+<a href="https://t.me/metanit" title="Подписаться на телеграм" rel="nofollow">
+Телеграм</a>|
+<a href="//metanit.com/donations.php" rel="nofollow">Помощь сайту</a>
+</div>
+<p>Copyright &copy; metanit.com, 2024. Все права защищены.</p>
+</div>
+
+</div>
+</body>
+</html>

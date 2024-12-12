@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html  lang="ru">
+<head>
+<title>Java | Чтение и запись текстовых файлов</title>
+<meta charset="utf-8" />
+<meta name="description" content="Чтение и запись текстовых файлов в языке программирования Java. Классы FileReader и FileWriter и их методы">
+	<meta name="viewport" content="width=device-width">
+	<link href="https://metanit.com/style44.css?v=2" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=1q9eVYceJPGbyL2btvahGGteoZgiG0g8kqjKhLMf9yXbDNhoT8dMPkoUQSvMw-u4L34J8SavljAMcrPFf0LmcA" charset="UTF-8"></script>
+</head>
+<body>
+	<div id="container">
+		<header>
+			<div id="logo">
+				<a class="logoTitle" href="/" title="На главную">METANIT.COM</a>
+				<div class="logoDefinition">Сайт о программировании</div> 
+			</div>
+		</header>
+		<h2>Чтение и запись текстовых файлов</h2>
+		<div class="date">Последнее обновление: 26.04.2018</div>
+		
+		<style>
+		@media(min-width: 760px) { #yandex_rtb_R-A-201190-1 { max-width: 728px; height: 90px;  } }
+		</style>
+
+		<p>Хотя с помощью ранее рассмотренных классов можно записывать текст в файлы, однако они предназначены прежде всего для работы с бинарными 
+		потоками данных, и их возможностей для полноценной работы с текстовыми файлами недостаточно. И для этой цели служат совсем другие классы, которые являются наследниками абстрактных классов <code>Reader</code> и <code>Writer</code>.</p>
+		<h3>Чтение файлов. Класс FileReader</h3>
+		<p>Класс FileReader наследуется от абстрактного класса Reader и предоставляет функциональность для чтения текстовых файлов.</p>
+		<p>Для создания объекта FileReader мы можем использовать один из его конструкторов:</p>
+		<p>Поскольку считанная порция файла может быть меньше 256 символов (например, в файле всего 73 символа), и если количество считанных данных меньше размера буфера (256), 
+		то выполняем копирование массива с помощью метода Arrays.copy. То есть фактически обрезаем массив buf, оставляя в нем только те символы, которые считаны из файла.</p>
+			
+		<div id="footer">
+			<p>Copyright &copy; metanit.com, 2024. Все права защищены.</p>
+		</div>
+
+	</div>
+</body>
+</html>
